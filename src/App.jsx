@@ -1,16 +1,12 @@
-import { useState } from 'react'
-import Navbar from './components/NavBar.jsx'
-import Cart from './pages/Cart.jsx'
-import Homepage from './pages/HomePage.jsx'
-import Shopping from './pages/Shopping.jsx'
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-
   return (
-    <>
-
-    </>
-  )
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
