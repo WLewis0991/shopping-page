@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
 
-fetch('https://fakestoreapi.com/products/')
+fetch('https://api.escuelajs.co/api/v1/products')
             .then(res=>res.json())            
             .then(json=>console.log(json))
 
