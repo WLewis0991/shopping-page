@@ -17,6 +17,11 @@
   background-color: rgba(255, 255, 255, 0.389);
 }
 
+.navbar-logo{
+  text-decoration: none;
+  color: black;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
