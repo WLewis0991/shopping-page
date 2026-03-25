@@ -18,11 +18,11 @@ import CartCard from "../components/CartCard";
 }
 
     return(<>
-    <p>Cart</p>
           <div className="cart-container">
             {cart.map((item) => (
               <CartCard key={item.id} item={item} cart={cart} setCart={setCart}/> 
             ))}
+            <div className="cart-total-container">Total</div>
           </div>
     </>)
  }

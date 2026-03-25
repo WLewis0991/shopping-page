@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 function App() {
 
   const[products, setProducts] = useState([]);
+  const[loading,setLoading] = useState(true);
   const[cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -16,6 +17,8 @@ function App() {
       setProducts(data);
     } catch (err) {
       console.error(err);
+    }finally {
+      setLoading(false); 
     }
   };
 
@@ -24,7 +27,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes products={products} cart={cart} setCart={setCart}/>
+      <AppRoutes products={products} cart={cart} setCart={setCart} loading={loading}/>
     </BrowserRouter>
   );
 }
