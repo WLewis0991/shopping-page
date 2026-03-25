@@ -1,14 +1,29 @@
+
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-
-fetch('https://api.escuelajs.co/api/v1/products')
-            .then(res=>res.json())            
-            .then(json=>console.log(json))
+import { useState, useEffect } from "react";
 
 function App() {
+
+  const[products, setProducts] = useState([])
+
+  useEffect(() => {
+  const getProducts = async () => {
+    try {
+      const res = await fetch('https://fakestoreapi.com/products');
+      const data = await res.json();
+      setProducts(data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  getProducts();
+}, []);
+
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <AppRoutes products={products}/>
     </BrowserRouter>
   );
 }
