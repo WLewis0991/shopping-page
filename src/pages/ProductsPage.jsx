@@ -5,9 +5,6 @@ export default function ProductsPage(props) {
     console.log(products)
 
     return(<>
-    <p>Shopping</p>
-
-
       <div className="products-container">
         {products.map((item) => (
           <ProductCard key={item.id} item={item} /> 
