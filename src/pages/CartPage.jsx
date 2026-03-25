@@ -1,4 +1,5 @@
  import { Link } from "react-router-dom";
+ import ProductCard from "../components/ProductCard";
 
  export default function CartPage(props){
 
@@ -17,5 +18,10 @@
 
     return(<>
     <p>Cart</p>
+          <div className="cart-container">
+            {cart.map((item) => (
+              <ProductCard key={item.id} item={item} cart={cart} setCart={setCart}/> 
+            ))}
+          </div>
     </>)
  }

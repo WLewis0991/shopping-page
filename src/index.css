@@ -202,6 +202,10 @@
   object-fit: contain;
 }
 
+.product-card button{
+  cursor: pointer;
+}
+
 .empty-cart{
   min-height: 100vh;
   width: 100%;
