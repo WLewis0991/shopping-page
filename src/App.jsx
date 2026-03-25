@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 
 function App() {
 
-  const[products, setProducts] = useState([])
+  const[products, setProducts] = useState([]);
+  const[cart, setCart] = useState([]);
 
   useEffect(() => {
   const getProducts = async () => {
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes products={products}/>
+      <AppRoutes products={products} cart={cart} setCart={setCart}/>
     </BrowserRouter>
   );
 }
