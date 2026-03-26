@@ -325,7 +325,7 @@ body{
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.428);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: white;
   padding: 20px;
@@ -376,10 +376,10 @@ body{
  height: 200px;
  background-color: white; 
  border-radius: 10px;
-  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.428);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
 }
 
 hr {
   width: 80%;
-  border: 1px solid #000000; /* visible gray line */
+  border: 1px solid #000000; 
 }

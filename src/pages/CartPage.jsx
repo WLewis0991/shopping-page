@@ -45,6 +45,7 @@ function findTotal() {
               <p>Cart total : {findCartTotal().toFixed(2)}</p>
               <p>Shipping : $10.00 </p>
               <p>Tax (7.53%) : {findTax()} </p>
+              <hr />
               <h3>Total: {findTotal().toFixed(2)}</h3>
             </div>
           </div>
