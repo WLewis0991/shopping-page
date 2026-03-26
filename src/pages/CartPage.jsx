@@ -1,5 +1,4 @@
  import { Link } from "react-router-dom";
- import ProductCard from "../components/ProductCard";
 import CartCard from "../components/CartCard";
 
  export default function CartPage(props){
@@ -19,9 +18,11 @@ import CartCard from "../components/CartCard";
 
     return(<>
           <div className="cart-container">
+            <ul>
             {cart.map((item) => (
               <CartCard key={item.id} item={item} cart={cart} setCart={setCart}/> 
             ))}
+            </ul>
             <div className="cart-total-container">Total</div>
           </div>
     </>)

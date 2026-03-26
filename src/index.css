@@ -62,6 +62,10 @@
   transform: scaleX(1);
 }
 
+.cart-image{
+  height: 1.7em;
+}
+
 .not-found-page{
   display: flex;
   flex-direction: column;

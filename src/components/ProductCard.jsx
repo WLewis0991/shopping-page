@@ -2,9 +2,21 @@ export default function ProductCard(props){
 
     const {item, cart, setCart} = props
 
-    function addToCart(){
-        setCart(c => [...c,item])
+function addToCart(product) {
+  setCart(prevCart => {
+    const existingItem = prevCart.find(item => item.id === product.id);
+
+    if (existingItem) {
+      return prevCart.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      return [...prevCart, { ...product, quantity: 1 }];
     }
+  });
+}
 
     const formatPrice = (price) => price.toFixed(2);
 
@@ -17,7 +29,7 @@ export default function ProductCard(props){
   <div className="product-info">
     <h3>{item.title}</h3>
     <p className="price">${item.price.toFixed(2)}</p>
-    <button onClick={addToCart}>Add to Cart</button>
+    <button onClick={() => addToCart(item)}>Add to Cart</button>
   </div>
 </div>
 
