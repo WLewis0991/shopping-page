@@ -6,7 +6,7 @@ export default function CartCard(props){
     return(<>
         <li>
         <div className="cart-card">
-            <h3>{item.title}</h3>
+            <h4>{item.title}</h4>
             <img src={item.image} alt="" />
             <p>Quantity: {item.quantity}</p>
             <p>{item.quantity * item.price}</p>
