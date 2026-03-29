@@ -2,10 +2,10 @@ import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
 
 export default function MainLayout(props){
-  const {cartSize} = props
+  const {cart} = props
 
     return(<>
-        <NavBar cartSize={cartSize}/>
+        <NavBar cart={cart}/>
       <main>
         <Outlet />
       </main>

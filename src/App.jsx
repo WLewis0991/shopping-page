@@ -9,7 +9,7 @@ function App() {
   const[loading,setLoading] = useState(true);
   const[cart, setCart] = useState([]);
 
-  const cartSize = cart.length
+  
 
   useEffect(() => {
   const getProducts = async () => {
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes products={products} cart={cart} cartSize={cartSize} setCart={setCart} loading={loading} />
+      <AppRoutes products={products} cart={cart} setCart={setCart} loading={loading} />
     </BrowserRouter>
   );
 }

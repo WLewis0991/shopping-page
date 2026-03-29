@@ -7,13 +7,13 @@ import NotFound from "../pages/NotFound";
 
 
 export default function AppRoutes(props) {
-  const {products, cartSize, cart, setCart, loading} = props
+  const {products, cart, setCart, loading} = props
 
 
 
   return (
     <Routes>
-      <Route element={<MainLayout cartSize={cartSize}/>}>
+      <Route element={<MainLayout cart={cart}/>}>
         <Route path="/" element={<Homepage />} />
         <Route path="/products" element={<ProductsPage products={products} loading={loading} cart={cart} setCart={setCart}/>} />
         <Route path="/cart" element={<CartPage cart={cart} setCart={setCart} />} />
